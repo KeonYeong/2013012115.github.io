@@ -30,7 +30,7 @@ contract dccAuction {
     function buy() payable public returns (int) 
     {
         uint tokensToBuy = msg.value / tokenPrice;
-        gInfo_c[msg.sender].voterAddress = msg.sender;
+        voters[msg.sender].voterAddress = msg.sender;
         voters[msg.sender].tokenBought += tokensToBuy;
     }
     
